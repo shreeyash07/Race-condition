@@ -16,14 +16,14 @@ def main_task():
     global x 
     x = 0
   
-    t1 = threading.Thread(target=thread_task) 
-    t2 = threading.Thread(target=thread_task) 
+    thread1 = threading.Thread(target=thread_task) 
+    thread2 = threading.Thread(target=thread_task) 
   
-    t1.start() 
-    t2.start() 
+    thread1.start() 
+    thread2.start() 
   
-    t1.join() 
-    t2.join() 
+    thread1.join() 
+    thread2.join() 
   
 if __name__ == "__main__": 
     for i in range(10): 
